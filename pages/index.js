@@ -13,7 +13,15 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className="title">Welcome to Freezer Food Finder</h1>
+        <h1 className="title">
+          Welcome to
+          <br></br>
+          <img
+            src="/image/brandnamenew.png"
+            alt="Freezer Food Finder"
+            className="brand"
+          ></img>
+        </h1>
 
         <p className="description">
           What do you want to do?
@@ -25,7 +33,7 @@ export default function Home() {
             <a className="card">
               <h3>Store Food &rarr;</h3>
               <img
-                src="/image/putin.jpg"
+                src="/image/putin.png"
                 alt="put your things in the freezer"
                 className="icon"
               ></img>
@@ -36,18 +44,18 @@ export default function Home() {
             <a className="card">
               <h3>Find Food &rarr;</h3>
               <img
-                src="/image/finder.jpg"
+                src="/image/finder.png"
                 alt="search your freezers"
                 className="icon"
               ></img>
-              <p>Search for your freezer food &amp; clear used/eaten items</p>
+              <p>Search for your freezer food &amp; clear items</p>
             </a>
           </Link>
-          <Link href="/components/Shoppinglist">
+          <Link href="/list">
             <a className="card">
               <h3>Write Shoppinglist &rarr;</h3>
               <img
-                src="/image/shopping.jpg"
+                src="/image/shopping.png"
                 alt="a shopping bag filled with food"
                 className="icon"
               ></img>
@@ -58,78 +66,22 @@ export default function Home() {
             <a className="card">
               <h3>Defrost reminder &rarr;</h3>
               <img
-                src="/image/defrostreminder.jpg"
+                src="/image/defrosti.png"
                 alt="calender entry to defrost"
-                className="icon"
+                className="iconc"
               ></img>
-              <p>Add a defrost date to the calender &amp; get a reminder</p>
+              <p>
+                Add a defrost date &amp; <br></br>get a reminder
+              </p>
             </a>
           </Link>
         </div>
       </main>
 
       <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-        <div>
-          Icons erstellt von{' '}
-          <a href="http://www.creaticca.com/" title="Creaticca Creative Agency">
-            Creaticca Creative Agency
-          </a>{' '}
-          from{' '}
-          <a href="https://www.flaticon.com/de/" title="Flaticon">
-            www.flaticon.com
-          </a>
-        </div>
-        <div>
-          Icons erstellt von{' '}
-          <a href="http://www.freepik.com/" title="Freepik">
-            Freepik
-          </a>{' '}
-          from{' '}
-          <a href="https://www.flaticon.com/de/" title="Flaticon">
-            www.flaticon.com
-          </a>
-        </div>
-        <div>
-          Icons erstellt von{' '}
-          <a
-            href="https://www.flaticon.com/de/autoren/ultimatearm"
-            title="ultimatearm"
-          >
-            ultimatearm
-          </a>{' '}
-          from{' '}
-          <a href="https://www.flaticon.com/de/" title="Flaticon">
-            www.flaticon.com
-          </a>
-        </div>
-        <div>
-          Icons erstellt von{' '}
-          <a href="https://www.flaticon.com/de/autoren/srip" title="srip">
-            srip
-          </a>{' '}
-          from{' '}
-          <a href="https://www.flaticon.com/de/" title="Flaticon">
-            www.flaticon.com
-          </a>
-        </div>
-        <div>
-          Icons erstellt von{' '}
-          <a href="http://www.freepik.com/" title="Freepik">
-            Freepik
-          </a>{' '}
-          from{' '}
-          <a href="https://www.flaticon.com/de/" title="Flaticon">
-            www.flaticon.com
-          </a>
-        </div>
+        <Link href="/impressum">
+          <h3>Impressum</h3>
+        </Link>
       </footer>
 
       <style jsx>{`
@@ -140,6 +92,7 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          background-color: #6dd2dc52;
         }
 
         main {
@@ -254,6 +207,16 @@ export default function Home() {
           width: 80px;
           height: 80px;
           float: right;
+        }
+        .iconc {
+          width: 70px;
+          height: 70px;
+          float: right;
+        }
+        .brand {
+          width: 700px;
+          height: 150px;
+          margin: 10px;
         }
         .logo {
           height: 1em;

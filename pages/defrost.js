@@ -8,7 +8,13 @@ export default function Home() {
         <title>FMS</title>
         <link rel="icon" href="/snowplus.ico" />
       </Head>
-
+      <header>
+        <img
+          src="/image/brandnamenew.png"
+          alt="Freezer Food Finder"
+          className="brand"
+        ></img>
+      </header>
       <main>
         <h1 className="title">
           Welcome to Freezer Food Finder - defrost reminder

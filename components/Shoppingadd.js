@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Shoppinglist from './Shoppinglist';
 import Shopping from './Shopping';
-import Style from '../style.css';
+import Style from '../pages/_app.js';
 
 export default class Shoppingadd extends React.Component {
   state = {
@@ -54,6 +54,11 @@ export default class Shoppingadd extends React.Component {
 
     return (
       <div className="Background">
+        <img
+          src="./image/brandnamenew.png"
+          alt="Freezer Food Finder"
+          className="brand"
+        ></img>
         <Shoppinglist onSubmit={this.addTodo} />
         {todos.map((todo) => (
           <Shopping
@@ -63,28 +68,69 @@ export default class Shoppingadd extends React.Component {
           />
         ))}
         <div className="Bottom">
-          todos left: {this.state.todos.filter((todo) => !todo.complete).length}
+          Shopping list items:{' '}
+          {this.state.todos.filter((todo) => !todo.complete).length}
         </div>
         <div>
           <button
             className="Button"
             onClick={() => this.updateTodoToShow('all')}
           >
-            <i class="far fa-list-alt"></i>
+            All
           </button>
           <button
             className="Button"
             onClick={() => this.updateTodoToShow('open')}
           >
-            <i class="fab fa-rebel"></i>
+            Missing
           </button>
           <button
             className="Button"
             onClick={() => this.updateTodoToShow('done')}
           >
-            <i class="fas fa-glass-cheers"></i>
+            Done
           </button>
         </div>
+        <style jsx>
+          {`
+            .Bottom {
+              display: flex;
+              color: black;
+              font-size: 20px;
+              border-style: solid;
+              border-color: white;
+              border-width: 3px;
+              border-radius: 5px;
+              background-color: lightskyblue;
+              margin: 15px 10px 2px 50px;
+              padding: 5px 50px 5px 50px;
+              border-color: whitesmoke;
+              justify-content: center;
+              align-items: center;
+              max-width: 300px;
+            }
+            .Button {
+              font-size: 20px;
+              border-style: solid;
+              border-color: white;
+              border-width: 3px;
+              border-radius: 5px;
+              background-color: lightskyblue;
+              display: inline-block;
+              border-style: outset;
+              border-color: whitesmoke;
+              padding: 5px;
+              margin: 15px 6px 15px 50px;
+            }
+            // {* comment: hier ist die Hintergrundfarbe *}
+
+            .Background {
+              background-color: snowwhite;
+              margin: 5px 50px 10px 50px;
+              padding: 5px 50px 5px 50px;
+            }
+          `}
+        </style>
       </div>
     );
   }
