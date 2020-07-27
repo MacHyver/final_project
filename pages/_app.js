@@ -7,9 +7,6 @@ export default function MyApp({ Component, pageProps }) {
       <style jsx>
         {`
           .container {
-            min-height: 100vh;
-            padding: 0 0.5rem;
-            display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;

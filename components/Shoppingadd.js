@@ -53,12 +53,7 @@ export default class Shoppingadd extends React.Component {
     }
 
     return (
-      <div className="Background">
-        <img
-          src="./image/brandnamenew.png"
-          alt="Freezer Food Finder"
-          className="brand"
-        ></img>
+      <div className="background">
         <Shoppinglist onSubmit={this.addTodo} />
         {todos.map((todo) => (
           <Shopping
@@ -93,42 +88,45 @@ export default class Shoppingadd extends React.Component {
         </div>
         <style jsx>
           {`
+            .background {
+              background-color: snowwhite;
+
+              justify-content: center;
+              align-items: center;
+            }
             .Bottom {
               display: flex;
-              color: black;
+              color: white;
+              text-shadow: 1px 1px black;
               font-size: 20px;
               border-style: solid;
               border-color: white;
               border-width: 3px;
               border-radius: 5px;
-              background-color: lightskyblue;
-              margin: 15px 10px 2px 50px;
-              padding: 5px 50px 5px 50px;
+              background-color: #51dcfa4f;
+              margin: 15px 10px 2px 120px;
+              padding: 6px 50px 5px 50px;
               border-color: whitesmoke;
-              justify-content: center;
-              align-items: center;
+              width: 300px;
+              height: 45px;
               max-width: 300px;
             }
             .Button {
               font-size: 20px;
+              color: white;
+              text-shadow: 1px 1px black;
               border-style: solid;
               border-color: white;
               border-width: 3px;
               border-radius: 5px;
-              background-color: lightskyblue;
+              background-color: #51dcfa4f;
               display: inline-block;
               border-style: outset;
               border-color: whitesmoke;
               padding: 5px;
-              margin: 15px 6px 15px 50px;
+              margin: 15px -65px 15px 120px;
             }
             // {* comment: hier ist die Hintergrundfarbe *}
-
-            .Background {
-              background-color: snowwhite;
-              margin: 5px 50px 10px 50px;
-              padding: 5px 50px 5px 50px;
-            }
           `}
         </style>
       </div>

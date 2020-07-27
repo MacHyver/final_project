@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Back from '../components/Back';
+import Header from '../components/Header';
 import React, { useState } from 'react';
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
@@ -11,13 +13,7 @@ export default function Home() {
         <title>FMS - Impressum</title>
         <link rel="icon" href="/snowplus.ico" />
       </Head>
-      <header>
-        <img
-          src="/image/brandnamenew.png"
-          alt="Freezer Food Finder"
-          className="brand"
-        ></img>
-      </header>
+      <Header />
       <main>
         <h1 className="title">
           Impressum
@@ -89,7 +85,7 @@ export default function Home() {
           </a>
         </li>
       </main>
-
+      <Back />
       <style jsx>
         {`
           .brand {

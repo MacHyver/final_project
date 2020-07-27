@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import React, { useState, Fragment } from 'react';
 import Select from 'react-select';
+import Back from '../components/Back';
 
 import Link from 'next/link';
 /** @jsx jsx */
@@ -24,7 +25,7 @@ export default function Freezer() {
       </Head>
 
       <main>
-        <h1 className="title">Welcome to Freezer Food Finder</h1>
+        <h1 className="title">Freezer Food Finder</h1>
 
         <p className="description">
           Search your freezer for a product:
@@ -43,6 +44,7 @@ export default function Freezer() {
       </form>
       <p>show all button here? </p>
       <p>select by catergorie :) </p>
+      <Back />
     </div>
   );
 }

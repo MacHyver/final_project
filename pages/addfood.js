@@ -2,7 +2,8 @@ import Head from 'next/head';
 import React, { useState, Fragment } from 'react';
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
-
+import Back from '../components/Back';
+import Header from '../components/Header';
 import Select from 'react-select';
 import {
   freezerOptions,
@@ -41,19 +42,14 @@ export default function Freezer() {
         <title>Manage Freezer</title>
         <link rel="icon" href="/snowplus.ico" />
       </Head>
-      <header>
-        <img
-          src="/image/brandnamenew.png"
-          alt="Freezer Food Finder"
-          className="brand"
-        ></img>
-      </header>
+      <Header />
 
       {/* heres been the className container */}
 
       <div>
         <form onSubmit={handleSubmit}>
           <input
+            className="form"
             type="text"
             value={value}
             onChange={handleChange}
@@ -64,6 +60,7 @@ export default function Freezer() {
 
         <form onSubmit={handleSubmit}>
           <input
+            className="form"
             type="text"
             amount={amount}
             onChange={handleInput}
@@ -88,7 +85,10 @@ export default function Freezer() {
           />
         </div>
         <br></br>
-        <input type="submit" value="Save" />
+        <button type="submit">Save</button>
+        <br></br>
+        <br></br>
+        <Back />
       </div>
 
       <style jsx>
@@ -110,7 +110,7 @@ export default function Freezer() {
             margin: -100px 50px 80px 50px;
           }
 
-          input {
+          .form {
             width: 300px;
             height: 40px;
             color: black;
@@ -134,6 +134,24 @@ export default function Freezer() {
 
             padding: 6px 50px 6px 10px;
           }
+
+          button {
+            font-size: 22px;
+            color: white;
+            text-shadow: 2px 2px black;
+            border-style: solid;
+            border-color: white;
+            border-width: 3px;
+            border-radius: 5px;
+            background-color: #51dcfa4f;
+            display: inline-block;
+            border-style: outset;
+            border-color: whitesmoke;
+            padding: 5px;
+            margin-top: 10px;
+            margin-bottom: 60px;
+            width: 100%;
+            align: center;
         `}
       </style>
     </div>

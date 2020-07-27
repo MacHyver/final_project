@@ -21,8 +21,8 @@ export default (props) => (
     <style jsx>
       {`
         img {
-          width: 45px;
-          height: 45px;
+          width: 42px;
+          height: 42px;
           display: inline-block;
           border-style: outset;
           border-color: whitesmoke;
@@ -37,8 +37,8 @@ export default (props) => (
           border-width: 3px;
           border-radius: 5px;
           background-color: white;
-          margin: 15px 10px 2px 50px;
-          padding: 5px 50px 5px 50px;
+          margin: 15px 10px 2px 120px;
+          padding: 5px 50px 5px 10px;
           border-color: whitesmoke;
           min-width: 300px;
         }

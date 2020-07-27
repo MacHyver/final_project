@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Header from '../components/Header';
 import { render } from 'react-dom';
 import Style from '../pages/_app.js';
 
@@ -32,68 +33,60 @@ export default class Shoppinglist extends React.Component {
           <title>FMS</title>
           <link rel="icon" href="/snowplus.ico" />
         </Head>
-
+        <Header />
         <main>
           <h1 className="title">
-            <br></br>Shoppinglist creator
+            <br></br>Shoppinglist Creator
           </h1>
 
-          <p className="description">
-            what do you want to put on the shoppinglist?
-            {/* <code>pages/index.js</code> */}
-          </p>
-
-          <div>
-            <form onSubmit={this.handleSubmit}>
-              <input
-                className="Form"
-                name="text"
-                value={this.state.text}
-                onChange={this.handleChange}
-                placeholder="Add something!"
-              />
-
-              <img
-                onClick={this.handleSubmit}
-                src="/image/snowplusfree.png"
-                alt="add item to shoppinglist"
-              ></img>
-            </form>
-          </div>
+          <form onSubmit={this.handleSubmit}>
+            <input
+              name="text"
+              value={this.state.text}
+              onChange={this.handleChange}
+              placeholder="Add something!"
+            />
+            <img
+              onClick={this.handleSubmit}
+              src="/image/snowplusfree.png"
+              alt="add item to shoppinglist"
+            ></img>
+          </form>
         </main>
         <style jsx>
           {`
             .title {
-              font-size: 50px;
-              width: 900px;
-              display: inline-block;
-              justify-content: center;
-              align-items: center;
-              margin: 5px 50px 10px 10px;
-              padding: 5px 50px 5px 30px;
+              font-size: 65px;
+              margin-top: -10px;
+              text-align: center;
+              color: white;
+              text-shadow: 3px 3px #858383d9;
             }
+
             input {
               width: 300px;
               height: 45px;
               color: black;
               font-size: 20px;
+              justify-content: center;
+              align-items: center;
+
               border-style: solid;
               border-color: white;
               border-width: 3px;
               border-radius: 5px;
               background-color: white;
-              margin: 15px 10px 2px 50px;
+              margin: 30px 10px 2px 120px;
               padding: 5px 10px 5px 10px;
               border-color: whitesmoke;
             }
             img {
-              width: 45px;
-              height: 45px;
-              display: inline-block;
+              width: 42px;
+              height: 42px;
               border-style: outset;
               border-color: whitesmoke;
               padding: 5px;
-              margin: 15px 10px 2px 10px;
+              margin: 10px 10px -14px 5px;
             }
           `}
         </style>

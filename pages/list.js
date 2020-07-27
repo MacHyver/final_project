@@ -5,6 +5,7 @@ import { jsx, css } from '@emotion/core';
 import React, { Component } from 'react';
 import './_app.js';
 import Shoppingadd from '../components/Shoppingadd.js';
+import Back from '../components/Back';
 
 class List extends Component {
   state = {
@@ -28,6 +29,7 @@ class List extends Component {
       <div className="app">
         <div className="Body">
           <Shoppingadd />
+          <Back />
         </div>
         <style jsx>
           {`
